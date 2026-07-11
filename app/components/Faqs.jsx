@@ -41,7 +41,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-[#ECE2D6] py-20">
+    <section className="bg-[#ECE2D6] pt-20 pb-30">
       <div className="max-w-[1550] mx-auto px-6">
         {/* Heading */}
         <motion.div

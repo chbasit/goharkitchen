@@ -48,7 +48,7 @@ export default function FullscreenMenu({ close }) {
 
         <button
           onClick={close}
-          className="absolute top-8 left-8"
+          className="absolute top-8 left-8 cursor-pointer "
         >
           <X
             size={34}

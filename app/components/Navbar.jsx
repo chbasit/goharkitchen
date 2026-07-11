@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setOpen(true)}
-            className="text-white hover:scale-110 transition"
+            className="text-white hover:scale-110 transition cursor-pointer"
           >
             <Menu size={34} strokeWidth={1.5} />
           </button>
