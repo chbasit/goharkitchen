@@ -2,135 +2,135 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+
+const topImages = [
+ "/images/fs-who-broadway.jpg",
+  "/images/fs-broadway-2.jpg",
+  "/images/fs-who.jpg",
+  "/images/pashawar.jpg"
+];
+
+const bottomImages = [
+  "/images/fs-tajarat.jpg",
+  "/images/fs-who2.jpg",
+  "/images/fs-who-broadway.jpg",
+  "/images/fs1.jpg"
+];
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#F6F4EC] py-20">
-      <div className="max-w-[1400px] mx-auto px-6">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-  duration: 1.2,
-  ease: "easeOut",
-}}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-           
+    <section className="bg-[#ECE2D6] text-[#332820] py-24 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-6">
+        {/* ================= Mission ================= */}
 
-          <h2 className="font-heading text-4xl md:text-6xl text-[#2E2118]">
-            Beautiful Kitchens Designed For Modern Living
-          </h2>
+<motion.div
+  initial={{ opacity: 0, y: 70 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 1.2,
+    ease: "easeOut",
+  }}
+  className="max-w-6xl mx-auto mb-24"
+>
+  {/* Heading */}
+  <div className="text-center mb-12">
+    <h2
+      className="
+        font-display
+        text-[#3B2C24]
+        uppercase
+        leading-[0.92]
+        text-[48px]
+        md:text-[70px]
+        lg:text-[92px]
+      "
+    >
+      INSPIRED
+      
+      BY NOW
+    </h2>
+  </div>
 
-          <p className="font-body mt-6 text-gray-700 text-md md:text-lg ">
-            We create bespoke kitchens that combine timeless elegance,
-            exceptional craftsmanship, and practical functionality. Every space
-            is thoughtfully designed to reflect your lifestyle while becoming
-            the true heart of your home.
-          </p>
-        </motion.div>
+  {/* Description */}
+  <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+    <p className="font-body text-md md:text-lg text-[#332820] leading-relaxed">
+      At FS Architect, we believe design transforms the everyday into
+      something extraordinary. Each project begins with a vision where
+      aesthetics, functionality, and emotion coexist in perfect balance.
+    </p>
 
-        {/* Images & Quote */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Top Left */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+    <p className="font-body text-md md:text-lg text-[#332820] leading-relaxed">
+      We manage every phase with a turnkey approach, guaranteeing a
+      result that fully respects aesthetics, functionality, timeframes,
+      and budget.
+    </p>
+  </div>
+</motion.div>
+
+        {/* ================= First Row ================= */}
+
+       <div className="overflow-hidden">
+  <motion.div
+    animate={{
+      x: ["0%", "-50%"],
+    }}
     transition={{
-  duration: 1.2,
-  delay: 0.2,
-  ease: "easeOut",
-}}
+      duration: 60,
+      ease: "linear",
+      repeat: Infinity,
+    }}
+    className="flex gap-2 w-max"
+  >
+    {[...topImages, ...topImages].map((image, index) => (
+      <div
+        key={index}
+        className="relative w-[600px] h-[440px] shrink-0"
+      >
+        <Image
+          src={image}
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </motion.div>
+</div>
 
-          >
-            <Image
-              src="/images/about1.jpg"
-              alt=""
-              width={700}
-              height={600}
-              className="w-full h-[600px] object-cover"
-            />
-          </motion.div>
+        {/* spacing */}
 
-          {/* Top Right */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-           transition={{
-  duration: 1.2,
-  delay: 0.45,
-  ease: "easeOut",
-}}
-          >
-            <Image
-              src="/images/about4.jpg"
-              alt=""
-              width={700}
-              height={600}
-              className="w-full h-[600px] object-cover"
-            />
-          </motion.div>
+        <div className="h-2" />
 
-          {/* Bottom Left */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-  duration: 1.2,
-  delay: 0.7,
-  ease: "easeOut",
-}}
-          >
-            <Image
-              src="/images/about3.jpg"
-              alt=""
-              width={700}
-              height={600}
-              className="w-full h-[600px] object-cover"
-            />
-          </motion.div>
+        {/* ================= Second Row ================= */}
 
-          {/* Bottom Right Quote */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-  duration: 1.2,
-  delay: 0.95,
-  ease: "easeOut",
-}}
-            className="flex items-center p-10 md:p-14"
-          >
-            <div>
-              <Quote
-                size={42}
-                className="text-[#A98A64] mb-6 rotate-180"
-              />
-
-              <p className="font-body text-xl md:text-2xl leading-relaxed text-[#2E2118]">
-                Every kitchen we create is thoughtfully designed to blend
- elegance, comfort, and exceptional craftsmanship — creating spaces where memories are made every day.
-              </p>
-
-              <div className="mt-8">
-                <h4 className="font-display font-normal text-lg">
-                  Gohar Kitchen Design
-                </h4>
-
-                <p className="text-gray-700 font-display">
-                  Luxury Interior Studio
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+        <div className="overflow-hidden">
+  <motion.div
+    animate={{
+      x: ["-50%", "0%"],
+    }}
+    transition={{
+      duration: 60,
+      ease: "linear",
+      repeat: Infinity,
+    }}
+    className="flex gap-2 w-max"
+  >
+    {[...bottomImages, ...bottomImages].map((image, index) => (
+      <div
+        key={index}
+        className="relative w-[600px] h-[440px] shrink-0"
+      >
+        <Image
+          src={image}
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </motion.div>
+</div>
       </div>
     </section>
   );

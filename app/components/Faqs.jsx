@@ -6,106 +6,125 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "Do you offer custom kitchen designs?",
+    question: "What interior design services do you offer?",
     answer:
-      "Yes. Every kitchen is designed specifically for your home, lifestyle, and personal preferences. We create bespoke layouts that maximize functionality while reflecting your unique style.",
+      "We provide complete residential and commercial interior design services, including luxury homes, kitchens, restaurants, cafés, hotels, hostels, offices, and retail spaces.",
   },
   {
-    question: "How long does a kitchen renovation take?",
+    question: "Can you customize a design according to my requirements?",
     answer:
-      "Project timelines vary depending on the size and complexity of the renovation. Most complete kitchen projects take between 4 to 8 weeks from design approval to installation.",
+      "Absolutely. Every project is designed around your lifestyle, business needs, budget, and preferred aesthetic to create a unique and functional space.",
   },
   {
-    question: "Can you help with selecting materials and finishes?",
+    question: "How long does an interior design project take?",
     answer:
-      "Absolutely. We guide you through selecting cabinetry, countertops, backsplashes, flooring, lighting, hardware, and finishes to create a cohesive luxury kitchen.",
+      "Project timelines depend on the size and complexity of the space. After the initial consultation, we provide a detailed schedule with estimated milestones.",
   },
   {
-    question: "Do you provide 3D kitchen designs before construction?",
+    question: "Do you work on commercial projects?",
     answer:
-      "Yes. We provide realistic 3D visualizations so you can see exactly how your new kitchen will look before any work begins.",
+      "Yes. We specialize in restaurants, cafés, offices, hotels, hostels, retail stores, and other commercial interiors that combine aesthetics with functionality.",
   },
   {
-    question: "What types of kitchens do you design?",
-    answer:
-      "We specialize in modern, contemporary, classic, shaker, transitional, and luxury bespoke kitchens tailored to every client's vision.",
-  },
-  {
-    question: "Do you handle the complete installation?",
-    answer:
-      "Yes. From the initial consultation and design to manufacturing, installation, and finishing touches, we manage every stage of the project.",
-  },
+  question: "Do you provide 3D visualizations before execution?",
+  answer:
+    "Yes. We create realistic 3D renders and design visualizations so you can clearly see the final look of your space before construction or installation begins.",
+},
+{
+  question: "Do you handle both design and project execution?",
+  answer:
+    "Yes. We offer a complete turnkey solution, managing everything from concept development and space planning to material selection, construction, and final finishing for a seamless experience.",
+},
 ];
 
-export default function FAQs() {
-  const [open, setOpen] = useState(0);
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-[#F6F4EC] py-24">
+    <section className="bg-[#ECE2D6] py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-5xl md:text-6xl text-[#2E2118] mt-4">
-            Everything You Need To Know
-          </h2>
-          <p className="font-body mt-6 text-gray-700 text-md md:text-lg  max-w-2xl mx-auto">
-            Find answers to the most common questions about our luxury kitchen
-            design, renovation, and installation services.
-          </p>
-        </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-  {faqs.map((faq, index) => {
-    const isOpen = open === index;
-
-    return (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.08 }}
-        className="rounded-xl border border-stone-200 overflow-hidden h-fit"
-      >
-        <button
-          onClick={() => setOpen(isOpen ? null : index)}
-          className="w-full flex justify-between items-center px-7 py-6 text-left cursor-pointer"
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <h3 className="font-body text-md md:text-lg text-[#2E2118] pr-5">
-            {faq.question}
-          </h3>
+          <span className="font-display text-[#332820] text-5xl md:text-7xl mt-6 uppercase">
+            Frequently Asked Questions
+          </span>
 
-          {isOpen ? (
-            <Minus className="w-5 h-5 flex-shrink-0" />
-          ) : (
-            <Plus className="w-5 h-5 flex-shrink-0" />
-          )}
-        </button>
+         
 
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{
-                height: "auto",
-                opacity: 1,
-              }}
-              exit={{
-                height: 0,
-                opacity: 0,
-              }}
-              transition={{ duration: 0.35 }}
-            >
-              <div className="px-7 pb-7">
-                <p className="font-body text-gray-700 ">
-                  {faq.answer}
-                </p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    );
-  })}
-</div>
+          <p className="max-w-2xl mx-auto mt-6 text-[#332820]/80 text-md font-body leading-8">
+            Everything you need to know about our interior design process,
+            services, and how we transform spaces into timeless environments.
+          </p>
+        </motion.div>
+
+        {/* FAQ Items */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: index * 0.08 }}
+  className="h-fit border border-[#332820]/15 rounded-2xl overflow-hidden bg-white/30 backdrop-blur-sm"
+>
+                <button
+                  onClick={() =>
+                    setOpenIndex(isOpen ? null : index)
+                  }
+                  className="w-full flex items-center justify-between px-8 py-7 text-left"
+                >
+                  <h3 className="font-body text-[#332820] text-lg">
+                    {faq.question}
+                  </h3>
+
+                  <div className="cursor-pointer w-10 h-10 rounded-full border border-[#332820]/20 flex items-center justify-center">
+                    {isOpen ? (
+                      <Minus size={18} className="text-[#332820]" />
+                    ) : (
+                      <Plus size={18} className="text-[#332820]" />
+                    )}
+                  </div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{
+                        height: "auto",
+                        opacity: 1,
+                      }}
+                      exit={{
+                        height: 0,
+                        opacity: 0,
+                      }}
+                      transition={{
+                        duration: 0.35,
+                      }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-8 pb-8">
+                        <p className="text-[#332820]  font-body text-md">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

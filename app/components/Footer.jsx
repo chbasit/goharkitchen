@@ -1,103 +1,161 @@
 "use client";
 
 import Link from "next/link";
- 
 
 const links = [
-  "Home",
-  "About",
-  "Projects",
-  "Kitchen",
-  "Wardrobes",
-  "Contact",
+  { name: "HOME", href: "/" },
+  { name: "ABOUT US", href: "/about" },
+  { name: "VISION", href: "/vision" },
+  { name: "TEAM", href: "/team" },
+  { name: "SERVICES", href: "/services" },
+  { name: "PROJECTS", href: "/projects" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F6F4EC] text-black">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-3 gap-12">
+    <footer className="bg-[#332820] text-[#E7DDD1] overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-8 lg:px-14 py-20">
 
-          {/* Left */}
+        <div className="grid lg:grid-cols-[420px_1fr] gap-20">
+
+          {/* LEFT NAVIGATION */}
+
           <div>
-            <h2 className="text-4xl font-body mb-4">
-              GK
-            </h2>
-
-            <p className="text-xl font-body">
-              Home Decor
-            </p>
-
-            <p className="mt-2 text-black font-body">
-              Kitchen | Wardrobe | Media Walls
-            </p>
-
-            <p className="mt-6 text-black leading-7 max-w-sm font-body">
-              Your trusted home interior & kitchen partner, creating elegant
-              spaces with premium craftsmanship and timeless design.
-            </p>
-          </div>
-
-          {/* Center */}
-          <div>
-            <h3 className="font-body tracking-[3px] text-md mb-6">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-4 font-body">
+            <ul className="space-y-8">
               {links.map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href="#"
-                    className="text-black hover:underline transition"
+                    href={item.href}
+                    className="font-display text-3xl md:text-5xl uppercase tracking-wide transition-all duration-300 hover:text-white hover:translate-x-3 inline-block"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Right */}
+          {/* RIGHT */}
+
           <div>
-            <h3 className="font-body tracking-[3px] text-md mb-6">
-              Contact
-            </h3>
 
-            <div className="space-y-5 text-black font-body">
+            {/* Brand */}
 
-              <div className="flex items-center gap-3">
-                 
-                <span>0300 7023202</span>
+            
+
+            <div className="grid md:grid-cols-2 gap-14">
+
+              {/* LEFT INFO */}
+
+              <div className="space-y-12">
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Services
+                  </h4>
+
+                  <p className="font-body text-lg leading-9 text-[#E7DDD1]">
+                    Architecture
+                    <br />
+                    Interior Design
+                    <br />
+                    Construction
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Phone
+                  </h4>
+
+                  <a
+                    href="tel:+923153366669"
+                    className="font-body text-lg hover:text-white"
+                  >
+                    +92 315 3366669
+                  </a>
+                </div>
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Address
+                  </h4>
+
+                  <p className="font-body text-lg leading-8">
+                    37 CCA Block L
+                    <br />
+                    Khayaban-e-Amin Society
+                    <br />
+                    Lahore, Pakistan
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                {/* <Mail size={18} /> */}
-                <span>hello@goharkitchen.com</span>
-              </div>
+              {/* RIGHT INFO */}
 
-              <div className="flex items-start gap-3">
-                {/* <MapPin size={18} className="mt-1" /> */}
-                <span>
-                  Canal Road , Faisalabad, Pakistan
-                </span>
+              <div className="space-y-12">
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Email
+                  </h4>
+
+                  <a
+                    href="mailto:faizansultanarchitects@gmail.com"
+                    className="font-body text-lg break-all hover:text-white"
+                  >
+                    faizansultanarchitects@gmail.com
+                  </a>
+                </div>
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Follow Us
+                  </h4>
+
+                  <div className="space-y-2 font-body text-lg">
+                    <Link href="#">Instagram</Link>
+                    <br />
+                    <Link href="#">Facebook</Link>
+                    <br />
+                    <Link href="#">LinkedIn</Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-body uppercase text-sm tracking-[3px] mb-3 text-[#C9BFB4]">
+                    Office Hours
+                  </h4>
+
+                  <p className="font-body text-lg leading-8">
+                    Monday – Saturday
+                    <br />
+                    9:00 AM – 6:00 PM
+                  </p>
+                </div>
               </div>
             </div>
 
-           
+            {/* Bottom */}
+
+            <div className="border-t border-white/10 mt-20 pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
+
+              <p className="font-body text-sm text-[#C9BFB4]">
+                © 2026 Faizan Sultan Architects. All Rights Reserved.
+              </p>
+
+              <div className="flex gap-8 font-body text-sm text-[#C9BFB4]">
+                <Link href="#">Privacy Policy</Link>
+                <Link href="#">Terms & Conditions</Link>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
 
-        <div className="border-t border-white/10 font-body mt-14 pt-6 flex flex-col md:flex-row justify-between items-center text-md text-black">
-          <p>
-            © 2026 Gohar Kitchen Design. All Rights Reserved.
-          </p>
-
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms & Conditions</Link>
-          </div>
-        </div>
       </div>
     </footer>
   );

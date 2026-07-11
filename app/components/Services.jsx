@@ -3,89 +3,84 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const services = [
+const projects = [
   {
-    title: "Custom Kitchen Design",
-    description:
-      "Bespoke kitchen layouts designed to suit your lifestyle with timeless elegance and practical functionality.",
-    image: "/images/image1.jpg",
+    title: "Luxury Residence",
+    subtitle: "Featured Project",
+    image: "/images/fs-image-new.jpg",
   },
   {
-    title: "Luxury Cabinetry",
-    description:
-      "Premium handcrafted cabinetry with high-quality finishes, smart storage, and exceptional craftsmanship.",
-    image: "/images/image3.jpg",
+    title: "Modern Villa",
+    subtitle: "Featured Project",
+    image: "/images/fs-tajarat.jpg",
   },
   {
-    title: "Kitchen Renovation",
-    description:
-      "Transform outdated kitchens into beautiful modern spaces using premium materials and thoughtful design.",
-    image: "/images/image4.jpg",
+    title: "Corporate Office",
+    subtitle: "Featured Project",
+    image: "/images/fs-broadway-2.jpg",
   },
 ];
 
-export default function ServicesSection() {
+export default function FeaturedProjects() {
   return (
-    <section className="bg-[#F6F4EC] py-10 pb-12">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+    <section className="bg-black">
+      {projects.map((project, index) => (
+        <section
+          key={index}
+          className="sticky top-0 h-screen overflow-hidden"
+          style={{
+            zIndex: index + 1,
+          }}
         >
-         
+          {/* Background Image */}
 
-          <h2 className="font-heading text-5xl md:text-6xl text-[#2E2118] mt-4 mb-4">
-            Timeless Kitchen Design
-          </h2>
+          <motion.div
+            initial={{ scale: 1.15 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.4 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              priority
+              className="object-cover"
+            />
+          </motion.div>
 
+          {/* Overlay */}
 
-          <p className="font-body text-gray-700 text-md md:text-lg">
-            We create elegant kitchens that combine beautiful aesthetics,
-            premium craftsmanship, and everyday functionality for modern homes.
-          </p>
-        </motion.div>
+          <div className="absolute inset-0 bg-black/20" />
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.25,
-              }}
-              className="group"
-            >
-              <div className="overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={450}
-                  height={600}
-                  className="w-full h-[500px] object-cover transition duration-700 group-hover:scale-110"
-                />
-              </div>
+          {/* Content */}
 
-              <div className="pt-6">
-                <h3 className="font-heading text-3xl md:text-4xl text-[#2E2118] mb-3">
-                  {service.title}
-                </h3>
+          <div className="relative z-10 h-full max-w-[1500px] mx-auto px-10 flex items-center justify-between">
 
-                <p className="font-body text-gray-700 text-md md:text-lg">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+            <div>
+              <p className="font-body uppercase tracking-[4px] text-white/80 mb-6 text-xl">
+                {project.subtitle}
+              </p>
+
+              <h2 className="font-display text-7xl md:text-9xl text-[#F1E7D9] leading-[0.9]">
+                {project.title}
+              </h2>
+            </div>
+
+            <div className="flex flex-col items-end gap-10">
+              <span className="font-body text-4xl text-white">
+                {index + 1} / {projects.length}
+              </span>
+
+              <button className="border border-white rounded-full px-10 py-4 text-white font-body hover:bg-white hover:text-black transition">
+                VIEW
+              </button>
+            </div>
+
+          </div>
+        </section>
+      ))}
     </section>
   );
 }

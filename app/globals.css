@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+/* ===========================
+   Fonts
+=========================== */
+
 @font-face {
   font-family: "BeyondInfinity";
   src: url("/font/Beyond Infinity - Demo.ttf") format("truetype");
@@ -7,32 +12,73 @@
   font-display: swap;
 }
 
+/* New Body Font */
 @font-face {
-  font-family: "BlackerText";
-  src: url("/font/Zetafonts - Blacker Pro Text Light.otf") format("opentype");
-  font-weight: 300;
+  font-family: "BagossCondensed";
+  src: url("/font/BagossCondensed-TRIAL-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Astetes */
+@font-face {
+  font-family: "Astetes";
+  src: url("/font/Astetes-BF675deaaaa9f10.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BlackerDisplay";
-  src: url("/font/Zetafonts - Blacker Pro Display Medium Italic.otf")
-    format("opentype");
-  font-weight: 500;
-  font-style: italic;
+  font-family: "Astetes";
+  src: url("/font/Astetes-BF675deaaa101f4.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
-/* Utility classes */
+/* ===========================
+   Utility Classes
+=========================== */
+
 .font-heading {
   font-family: "BeyondInfinity", cursive;
 }
 
 .font-display {
-  font-family: "BlackerDisplay", serif;
+  font-family: "Astetes", serif;
 }
 
+/* Body Font */
 .font-body {
-  font-family: "BlackerText", sans-serif;
+  font-family: "BagossCondensed", sans-serif;
+}
+
+/* ===========================
+   Base Styles
+=========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "BagossCondensed", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Astetes", serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
 }
