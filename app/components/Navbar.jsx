@@ -41,7 +41,7 @@ export default function Navbar() {
             : "bg-[#332820] backdrop-blur-xl border border-white/10"
         }`}
       >
-        <div className="h-20 px-8 flex items-center justify-between">
+        <div className="h-20 px-2 md:px-8 flex items-center justify-between">
 
           {/* Hamburger */}
           <button
@@ -53,7 +53,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 text-center">
-            <h2 className="font-display text-white text-2xl lg:text-3xl tracking-[6px]">
+            <h2 className="font-display text-white text-xl lg:text-3xl tracking-[6px]">
               FS
             </h2>
 
@@ -62,12 +62,11 @@ export default function Navbar() {
             </p>
           </div>
 
-          {/* Portfolio Button */}
           <button
             className="
             cursor-pointer
             rounded-full
-            px-7
+             px-0 md:px-7
             py-3
             text-white
             uppercase

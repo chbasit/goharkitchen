@@ -21,84 +21,133 @@ export default function HeroHeader() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/55 z-10" />
 
-      {/* Hero Content */}
-      <div className="absolute inset-0 z-20">
+    {/* Hero Content */}
+<div className="absolute inset-0 z-20 flex flex-col lg:block">
 
-        {/* Left Large Title */}
-        <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 1.6,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="absolute left-6 lg:left-16 top-28 lg:top-36"
-        >
-          <h1 className="font-serif uppercase text-white leading-[0.9] text-[45px] md:text-[70px] lg:text-[90px] xl:text-[130px]">
-            Study of
-            <br />
-            Architecture
-          </h1>
-        </motion.div>
+  {/* Top Heading */}
+  <motion.div
+    initial={{ x: -300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{
+      duration: 1.6,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+    className="
+      px-4
+      pt-24
+      lg:absolute lg:left-16
+    "
+  >
+    <h1 className="font-serif uppercase text-white leading-[0.9] pt-48 md:pt-12
+      text-[34px]
+      sm:text-[42px]
+      md:text-[60px]
+      lg:text-[80px]
+      xl:text-[120px]">
+      Study of
+      <br />
+      Architecture
+    </h1>
+  </motion.div>
 
-        {/* Bottom Left Text */}
-        <motion.div
-          initial={{ y: 120, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 0.7,
-            duration: 1.4,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="absolute left-6 lg:left-16 bottom-36"
-        >
-          <p className="font-serif text-white text-2xl md:text-3xl lg:text-5xl leading-tight">
-            Exclusive design,
-            <br />
-            timeless emotions
-          </p>
-        </motion.div>
+  {/* Bottom Area */}
+  <div
+    className="
+      mt-auto
+      px-4
+      pb-6
+      lg:p-0
+    "
+  >
+    {/* Left Text */}
+    <motion.p
+      initial={{ y: 120, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.7,
+        duration: 1.4,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
+        font-serif
+        text-white
+        text-xl
+        sm:text-2xl
+        mb-3
 
-        {/* Right Large Text */}
-        <motion.div
-          initial={{ x: 300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            delay: 1,
-            duration: 1.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="absolute right-6 lg:right-16 bottom-28 text-right"
-        >
-          <h2 className="font-serif uppercase text-white leading-[0.9] text-[55px] md:text-[80px] lg:text-[130px] xl:text-[150px]">
-            Interior
-            <br />
-            Design
-          </h2>
-        </motion.div>
+        lg:absolute
+        lg:left-16
+        lg:bottom-36
+        lg:text-5xl
+      "
+    >
+      Exclusive design,
+      <br />
+      timeless emotions
+    </motion.p>
 
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 1.6,
-            duration: 1,
-          }}
-          className="absolute left-6 lg:left-16 bottom-12 flex gap-5 flex-wrap"
-        >
-          <button className="bg-white text-black px-8 py-4 flex items-center gap-3 uppercase tracking-[3px] hover:bg-[#D4AF37] transition">
-            View Projects
-            <ArrowRight size={18} />
-          </button>
+    {/* Right Heading */}
+    <motion.h2
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{
+        delay: 1,
+        duration: 1.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
+        font-serif
+        uppercase
+        text-white
+        leading-[0.9]
+        text-right
 
-          <button className="border border-white text-white px-8 py-4 uppercase tracking-[3px] hover:bg-white hover:text-black transition">
-            Free Consultation
-          </button>
-        </motion.div>
+        text-[42px]
+        sm:text-[54px]
+        mb-5
 
-        
-      </div>
+        lg:absolute
+        lg:right-16
+        lg:bottom-28
+        lg:text-[120px]
+        xl:text-[150px]
+      "
+    >
+      Interior
+      <br />
+      Design
+    </motion.h2>
+
+    {/* Buttons */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        delay: 1.6,
+        duration: 1,
+      }}
+      className="
+        flex
+        flex-col
+        gap-3
+
+        lg:absolute
+        lg:left-16
+        lg:bottom-12
+        lg:flex-row
+      "
+    >
+      <button className="bg-white text-black px-8 py-4 flex items-center justify-center gap-3 uppercase tracking-[3px] hover:bg-[#D4AF37] transition">
+        View Projects
+        <ArrowRight size={18} />
+      </button>
+
+      <button className="border border-white text-white px-8 py-4 uppercase tracking-[3px] hover:bg-white hover:text-black transition">
+        Free Consultation
+      </button>
+    </motion.div>
+  </div>
+</div>
     </header>
   );
 }

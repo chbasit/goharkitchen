@@ -166,7 +166,7 @@ export default function WhoWeAre() {
                   duration: 2,
                   ease: "easeOut",
                 }}
-                className="relative h-[360px] md:h-[420px] lg:h-[620px] w-full"
+                className="relative h-[360px] md:h-[420px] lg:h-[620px] w-full px-2 md:px-0"
               >
                 <Image
                   src="/images/fs-who-broadway.jpg"

@@ -42,7 +42,7 @@ export default function FAQSection() {
 
   return (
     <section className="bg-[#ECE2D6] py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1550] mx-auto px-6">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -51,13 +51,13 @@ export default function FAQSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="font-display text-[#332820] text-5xl md:text-7xl mt-6 uppercase">
+          <span className="font-display text-[#332820] text-4xl md:text-7xl mt-6">
             Frequently Asked Questions
           </span>
 
          
 
-          <p className="max-w-2xl mx-auto mt-6 text-[#332820]/80 text-md font-body leading-8">
+          <p className="max-w-2xl mx-auto mt-6 text-[#332820] text-md font-body">
             Everything you need to know about our interior design process,
             services, and how we transform spaces into timeless environments.
           </p>
@@ -75,19 +75,19 @@ export default function FAQSection() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ delay: index * 0.08 }}
-  className="h-fit border border-[#332820]/15 rounded-2xl overflow-hidden bg-white/30 backdrop-blur-sm"
+  className="h-fit  overflow-hidden"
 >
                 <button
                   onClick={() =>
                     setOpenIndex(isOpen ? null : index)
                   }
-                  className="w-full flex items-center justify-between px-8 py-7 text-left"
+                  className="w-full flex items-center justify-between px-0 md:px-4 py-2 md:py-4 text-left"
                 >
                   <h3 className="font-body text-[#332820] text-lg">
                     {faq.question}
                   </h3>
 
-                  <div className="cursor-pointer w-10 h-10 rounded-full border border-[#332820]/20 flex items-center justify-center">
+                  <div className="cursor-pointer w-10 h-10  flex items-center justify-center">
                     {isOpen ? (
                       <Minus size={18} className="text-[#332820]" />
                     ) : (

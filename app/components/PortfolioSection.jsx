@@ -37,11 +37,10 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="bg-[#ECE2D6] pt-30 overflow-hidden">
+    <section className="bg-[#ECE2D6] pt-18 md:pt-30 overflow-hidden">
 
-      <div className="max-w-[1550px] ">
-
-        <div className="grid lg:grid-cols-[530px_1fr] gap-20 items-center ">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-12">
+  <div className="grid lg:grid-cols-[530px_1fr] gap-10 lg:gap-20 items-center">
 
           {/* LEFT CONTENT */}
 
@@ -53,7 +52,7 @@ export default function PortfolioSection() {
               duration: 1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="px-6 lg:px-12"
+             
           >
 
              
@@ -61,12 +60,14 @@ export default function PortfolioSection() {
             <h2
               className="
               font-display
-              text-[#32261F]
-              leading-[0.95]
-              uppercase
-              text-[52px]
-              lg:text-[88px]
-              mt-8
+text-[#32261F]
+leading-[0.95]
+uppercase
+text-[36px]
+sm:text-[44px]
+md:text-[52px]
+lg:text-[88px]
+mt-6 lg:mt-8
               "
             >
               Portfolio
@@ -76,7 +77,7 @@ export default function PortfolioSection() {
               className="
               font-body
               text-[#332820]
-               
+               px-0
               mt-8
               text-md
               "
@@ -120,7 +121,7 @@ export default function PortfolioSection() {
   transition={{ duration: 1 }}
 >
   {/* Images */}
-  <div className="relative h-[386px] overflow-hidden">
+  <div className="relative h-[320px] sm:h-[400px] lg:h-[520px] overflow-hidden">
     <motion.div
       key={current}
       initial={{ x: "20%", opacity: 0 }}
@@ -144,7 +145,7 @@ export default function PortfolioSection() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="absolute left-8 bottom-8 text-white">
-          <h3 className="font-display text-5xl">
+          <h3 className="font-display text-2xl sm:text-3xl lg:text-5xl">
             {projects[current].title}
           </h3>
 
