@@ -22,7 +22,7 @@ export default function StorySection() {
       {titleLines.map((line, index) => (
         <div key={index} className="overflow-hidden">
           <motion.h2
-            initial={{ y: 120 }}
+            initial={{ y: 60 }}
             whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{

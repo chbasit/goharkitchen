@@ -19,7 +19,7 @@ const bottomImages = [
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#ECE2D6] text-[#332820] py-24 overflow-hidden">
+    <section className="bg-[#ECE2D6] text-[#332820] py-12  overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6">
         {/* ================= Mission ================= */}
 

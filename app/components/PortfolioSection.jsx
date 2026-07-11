@@ -117,6 +117,7 @@ mt-6 lg:mt-8
 {/* RIGHT SLIDER */}
 
 <motion.div
+className="min-w-0"
   initial={{ opacity: 0, x: 120 }}
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
@@ -132,10 +133,10 @@ mt-6 lg:mt-8
         duration: 0.8,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="flex gap-4 h-full"
+     className="flex gap-4 h-full w-full"
     >
       {/* Main Image */}
-      <div className="relative w-[582px] h-full overflow-hidden rounded-sm flex-shrink-0">
+      <div className="relative w-full lg:w-[582px] h-full overflow-hidden rounded-sm flex-shrink-0">
         <Image
           src={projects[current].image}
           alt={projects[current].title}
@@ -160,7 +161,7 @@ mt-6 lg:mt-8
       </div>
 
       {/* Next Preview */}
-      <div className="relative flex-1 h-full overflow-hidden rounded-sm">
+      <div className="hidden lg:block relative flex-1 h-full overflow-hidden rounded-sm">
         <Image
           src={projects[(current + 1) % projects.length].image}
           alt=""
@@ -179,7 +180,7 @@ mt-6 lg:mt-8
     <div className="flex gap-4">
       <button
         onClick={prevSlide}
-        className="w-14 h-14 rounded-full border border-[#3C2D24] flex items-center justify-center bg-[#3C2D24] text-white transition"
+        className="w-14 h-14 rounded-full border border-[#c2b0a4] flex items-center justify-center bg-[#3C2D24] text-white transition"
       >
         <ArrowLeft size={22} />
       </button>

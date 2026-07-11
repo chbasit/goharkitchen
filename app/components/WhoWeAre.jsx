@@ -148,9 +148,10 @@ export default function WhoWeAre() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               className="
-                ml-auto
-                overflow-hidden
-                rounded-none
+                 ml-auto
+  overflow-hidden
+  will-change-transform
+  transform-gpu
                  
               "
             >

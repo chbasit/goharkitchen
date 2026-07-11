@@ -37,10 +37,9 @@
   font-style: normal;
   font-display: swap;
 }
+ 
 
-/* ===========================
-   Utility Classes
-=========================== */
+ 
 
 .font-heading {
   font-family: "BeyondInfinity", cursive;
@@ -55,9 +54,7 @@
   font-family: "BagossCondensed", sans-serif;
 }
 
-/* ===========================
-   Base Styles
-=========================== */
+ 
 
 html {
   scroll-behavior: smooth;
