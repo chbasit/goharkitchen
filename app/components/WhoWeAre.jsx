@@ -101,7 +101,9 @@ export default function WhoWeAre() {
               text-white
               px-6
               py-3
-              rounded-full
+              rounded-br-full
+              rounded-tl-full
+              rounded-tr-full
                
               tracking-[3px]
               flex

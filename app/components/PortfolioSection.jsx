@@ -93,7 +93,9 @@ mt-6 lg:mt-8
             <button
               className="
               mt-10
-              rounded-full
+              rounded-br-full
+              rounded-tl-full
+              rounded-tr-full
               bg-[#3C2D24]
               text-white
               px-6
