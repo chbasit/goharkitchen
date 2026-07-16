@@ -102,15 +102,15 @@ export default function HeroHeader() {
         leading-[0.9]
         text-right
 
-        text-[42px]
-        sm:text-[54px]
+        text-[32px]
+        sm:text-[40px]
         mb-5
 
         lg:absolute
         lg:right-16
         lg:bottom-28
-        lg:text-[70px]
-        xl:text-[100px]
+        lg:text-[50px]
+        xl:text-[70px]
       "
     >
       Best Interior Designer
