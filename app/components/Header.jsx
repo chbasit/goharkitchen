@@ -109,13 +109,13 @@ export default function HeroHeader() {
         lg:absolute
         lg:right-16
         lg:bottom-28
-        lg:text-[120px]
-        xl:text-[150px]
+        lg:text-[90px]
+        xl:text-[120px]
       "
     >
-      Interior
+      Best Interior Designer
       <br />
-      Design
+       In Pakistan
     </motion.h2>
 
     {/* Buttons */}
