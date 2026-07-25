@@ -1,81 +1,28 @@
 @import "tailwindcss";
 
-/* ===========================
-   Fonts
-=========================== */
+/* ===============================
+   Fustat Font
+================================ */
 
 @font-face {
-  font-family: "BeyondInfinity";
-  src: url("/font/Beyond Infinity - Demo.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Fustat";
+  src: url("/fonts/Fustat[wght].ttf") format("truetype");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* New Body Font */
-@font-face {
-  font-family: "BagossCondensed";
-  src: url("/font/BagossCondensed-TRIAL-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Astetes */
-@font-face {
-  font-family: "Astetes";
-  src: url("/font/Astetes-BF675deaaaa9f10.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Astetes";
-  src: url("/font/Astetes-BF675deaaa101f4.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
- 
-
- 
-
-.font-heading {
-  font-family: "BeyondInfinity", cursive;
-}
-
-.font-display {
-  font-family: "Astetes", serif;
-}
-
-/* Body Font */
-.font-body {
-  font-family: "BagossCondensed", sans-serif;
-}
-
- 
+/* ===============================
+   Global
+================================ */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "BagossCondensed", sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Astetes", serif;
-  font-weight: 400;
-  letter-spacing: -0.03em;
+  margin: 0;
+  background: #fff;
+  color: #222222;
+  font-family: "Fustat", sans-serif;
 }

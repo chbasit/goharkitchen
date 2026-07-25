@@ -1,153 +1,59 @@
-"use client";
+import Image from "next/image";
 
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-
-export default function HeroHeader() {
+export default function Header() {
   return (
-    <header className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen min-h-[700px] overflow-hidden">
+      {/* Background Image */}
+      <Image
+  src="/images/header2.webp"
+  alt="Malaika Signature Atelier"
+  fill
+  priority
+  loading="eager"
+  fetchPriority="high"
+  sizes="100vw"
+  className="object-cover object-center"
+/>
 
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/images/video.mp4" type="video/mp4" />
-      </video>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/55 z-10" />
+      {/* Optional Gradient */}
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" /> */}
 
-    {/* Hero Content */}
-<div className="absolute inset-0 z-20 flex flex-col lg:block">
+      {/* Content */}
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 lg:px-10">
+        <div className="max-w-2xl">
+           
 
-  {/* Top Heading */}
-  <motion.div
-    initial={{ x: -300, opacity: 0 }}
-    animate={{ x: 0, opacity: 1 }}
-    transition={{
-      duration: 1.6,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-    className="
-      px-4
-      pt-24
-      lg:absolute lg:left-16
-    "
-  >
-    <h1 className="font-serif uppercase text-white leading-[0.9] pt-48 md:pt-12
-      text-[34px]
-      sm:text-[42px]
-      md:text-[60px]
-      lg:text-[80px]
-      xl:text-[120px]">
-      Study of
-      <br />
-      Architecture
-    </h1>
-  </motion.div>
+          <h1 className="mt-6 text-5xl font-medium leading-tight text-white md:text-6xl ">
+            Signature Atelier
+            <br />
+            
+              for Luxury
+             
+            <br />
+            Interior Spaces
+          </h1>
 
-  {/* Bottom Area */}
-  <div
-    className="
-      mt-auto
-      px-4
-      pb-6
-      lg:p-0
-    "
-  >
-    {/* Left Text */}
-    <motion.p
-      initial={{ y: 120, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        delay: 0.7,
-        duration: 1.4,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="
-        font-serif
-        text-white
-        text-xl
-        sm:text-2xl
-        mb-3
+         
 
-        lg:absolute
-        lg:left-16
-        lg:bottom-36
-        lg:text-5xl
-      "
-    >
-      Exclusive design,
-      <br />
-      timeless emotions
-    </motion.p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            
 
-    {/* Right Heading */}
-    <motion.h2
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{
-        delay: 1,
-        duration: 1.5,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="
-        font-serif
-        uppercase
-        text-white
-        leading-[0.9]
-        text-right
+            <a
+              href="#portfolio"
+              className=" border border-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em]  bg-white text-black"
+            >
+              View Portfolio
+            </a>
+          </div>
 
-        text-[32px]
-        sm:text-[40px]
-        mb-5
+        
+        </div>
+      </div>
 
-        lg:absolute
-        lg:right-16
-        lg:bottom-28
-        lg:text-[50px]
-        xl:text-[70px]
-      "
-    >
-      Best Interior Designer
-      <br />
-       In Pakistan
-    </motion.h2>
-
-    {/* Buttons */}
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        delay: 1.6,
-        duration: 1,
-      }}
-      className="
-        flex
-        flex-col
-        gap-3
-
-        lg:absolute
-        lg:left-16
-        lg:bottom-12
-        lg:flex-row
-      "
-    >
-      <button className="bg-white text-black px-8 py-4 flex items-center justify-center gap-3 uppercase tracking-[3px] hover:bg-[#D4AF37] transition">
-        View Projects
-        <ArrowRight size={18} />
-      </button>
-
-      <button className="border border-white text-white px-8 py-4 uppercase tracking-[3px] hover:bg-white hover:text-black transition">
-        Free Consultation
-      </button>
-    </motion.div>
-  </div>
-</div>
-    </header>
+      
+    </section>
   );
 }

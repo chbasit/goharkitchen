@@ -1,219 +1,133 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-const projects = [
+const CATEGORIES = [
   {
-    image: "/images/fs-broadway-2.jpg",
-    title: "Broadway Pizza",
-    location: "Lahore, Pakistan",
+    name: "Neon",
+    desc: "Glowing line-art for lounges, retail fronts and statement walls.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#1c1c1c" />
+        <path
+          d="M20 70C40 20 80 20 100 70C120 120 160 120 180 70"
+          stroke="#a9822e"
+          strokeWidth="4"
+          fill="none"
+          opacity="0.9"
+        />
+        <path
+          d="M20 70C40 20 80 20 100 70C120 120 160 120 180 70"
+          stroke="#cba85e"
+          strokeWidth="1.5"
+          fill="none"
+        />
+      </>
+    ),
   },
   {
-    image: "/images/fs-who.jpg",
-    title: "De Kitchen & Second life cafe",
-    location: "Peshawar KPK",
+    name: "Nature Calligraphy",
+    desc: "Botanical brush-script pieces that bring the outdoors in.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#f7f6f2" />
+        <path
+          d="M30 110C60 40 110 40 100 90C95 115 140 100 130 60C125 40 160 30 170 60"
+          stroke="#222222"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <circle cx="150" cy="45" r="5" fill="#7a3427" opacity="0.7" />
+      </>
+    ),
   },
   {
-    image: "/images/fs1.jpg",
-    title: "Broadway Pizza",
-    location: "Multan, Pakistan",
+    name: "Realism",
+    desc: "Photographic detail rendered by hand, in oil or graphite.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#e7e4dc" />
+        <circle cx="100" cy="70" r="45" fill="#222222" opacity="0.75" />
+        <circle cx="100" cy="70" r="45" fill="none" stroke="#a9822e" strokeWidth="2" />
+      </>
+    ),
+  },
+  {
+    name: "Portraits",
+    desc: "Commissioned likenesses — family, founders, or a favourite muse.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#222222" />
+        <ellipse cx="100" cy="60" rx="26" ry="32" fill="#f7f6f2" opacity="0.9" />
+        <path d="M60 130C70 95 130 95 140 130" fill="#f7f6f2" opacity="0.9" />
+      </>
+    ),
+  },
+  {
+    name: "Oil",
+    desc: "Textured, layered canvases with real impasto brushwork.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#f7f6f2" />
+        <circle cx="70" cy="55" r="30" fill="#7a3427" opacity="0.55" />
+        <circle cx="120" cy="90" r="34" fill="#a9822e" opacity="0.5" />
+        <circle cx="140" cy="45" r="18" fill="#222222" opacity="0.35" />
+      </>
+    ),
+  },
+  {
+    name: "Abstract",
+    desc: "Bold colour-field and geometric works for modern interiors.",
+    swatch: (
+      <>
+        <rect width="100%" height="100%" fill="#f7f6f2" />
+        <rect x="20" y="20" width="70" height="100" fill="#222222" />
+        <rect x="100" y="20" width="80" height="45" fill="#a9822e" />
+        <rect x="100" y="75" width="80" height="45" fill="#7a3427" />
+      </>
+    ),
   },
 ];
 
-export default function PortfolioSection() {
-  const [current, setCurrent] = useState(0);
-
-   
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? projects.length - 1 : prev - 1
-    );
-  };
-
+export default function Portfolio() {
   return (
-    <section className="bg-[#ECE2D6] pt-18 md:pt-30 overflow-hidden">
-
-      <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-12">
-  <div className="grid lg:grid-cols-[530px_1fr] gap-10 lg:gap-20 items-center">
-
-          {/* LEFT CONTENT */}
-
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-             
-          >
-
-             
-
-            <h2
-              className="
-              font-display
-text-[#32261F]
-leading-[0.95]
-uppercase
-text-[36px]
-sm:text-[44px]
-md:text-[52px]
-lg:text-[88px]
-mt-6 lg:mt-8
-              "
-            >
-              Portfolio
-            </h2>
-
-            <p
-              className="
-              font-body
-              text-[#332820]
-               px-0
-              mt-8
-              text-md
-              "
-            >
-              FS Architects creates elegant interiors that combine
-              timeless aesthetics with practical functionality.
-              From luxury residences and premium kitchens to
-              restaurants, cafés, hotels, hostels, and commercial
-              interiors, every project is designed to elevate
-              everyday living.
-            </p>
-
-            <button
-              className="
-              mt-10
-              rounded-br-full
-              rounded-tl-full
-              rounded-tr-full
-              bg-[#3C2D24]
-              text-white
-              px-6
-              py-3
-               
-              tracking-[3px]
-              font-body
-              hover:bg-[#5C4536]
-              transition
-              "
-            >
-              View Portfolio
-            </button>
-
-          </motion.div>
-
-         {/* RIGHT SLIDER */}
-
-{/* RIGHT SLIDER */}
-
-<motion.div
-className="min-w-0"
-  initial={{ opacity: 0, x: 120 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1 }}
->
-  {/* Images */}
-  <div className="relative h-[320px] sm:h-[400px] lg:h-[520px] overflow-hidden">
-    <motion.div
-      key={current}
-      initial={{ x: "20%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-     className="flex gap-4 h-full w-full"
-    >
-      {/* Main Image */}
-      <div className="relative w-full lg:w-[582px] h-full overflow-hidden rounded-sm flex-shrink-0">
-        <Image
-          src={projects[current].image}
-          alt={projects[current].title}
-          fill
-          priority
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-black/20" />
-
-        <div className="absolute left-8 bottom-8 text-white">
-          <h3 className="font-display text-2xl sm:text-3xl lg:text-5xl">
-            {projects[current].title}
-          </h3>
-
-          <p className="mt-2 text-xl">
-            {projects[current].location}
+    <section id="portfolio" className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="max-w-xl">
+          <span className="eyebrow">What I Create</span>
+          <h2 className="font-display mt-4 text-[2.1rem] font-medium leading-tight text-[#222222] sm:text-[2.5rem]">
+            Six disciplines, one signature
+          </h2>
+          <p className="mt-4 text-[0.98rem] leading-relaxed text-[#6b6963]">
+            Every commission is painted or hand-set to order — never printed,
+            never generic. Choose a discipline, or let it evolve across a
+            few.
           </p>
         </div>
 
-        
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden border border-[#e7e4dc] bg-[#e7e4dc] sm:grid-cols-2 lg:grid-cols-3">
+          {CATEGORIES.map((cat) => (
+            <div
+              key={cat.name}
+              className="group flex flex-col bg-white p-8 transition-colors hover:bg-[#f7f6f2]"
+            >
+              <div className="h-32 w-full overflow-hidden">
+                <svg
+                  viewBox="0 0 200 130"
+                  className="h-full w-full"
+                  preserveAspectRatio="xMidYMid slice"
+                  aria-hidden="true"
+                >
+                  {cat.swatch}
+                </svg>
+              </div>
+              <h3 className="font-display mt-6 text-[1.25rem] font-medium text-[#222222]">
+                {cat.name}
+              </h3>
+              <p className="mt-2 text-[0.88rem] leading-relaxed text-[#6b6963]">
+                {cat.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* Next Preview */}
-      <div className="hidden lg:block relative flex-1 h-full overflow-hidden rounded-sm">
-        <Image
-          src={projects[(current + 1) % projects.length].image}
-          alt=""
-          fill
-          className="object-cover"
-        />
-
-        <div className="absolute inset-0 bg-black/35" />
-      </div>
-    </motion.div>
-  </div>
-
-  {/* Bottom Controls */}
-  <div className="mt-8 flex items-center justify-between">
-    {/* Buttons */}
-    <div className="flex gap-4">
-      <button
-        onClick={prevSlide}
-        className="w-14 h-14 rounded-full border border-[#c2b0a4] flex items-center justify-center bg-[#3C2D24] text-white transition"
-      >
-        <ArrowLeft size={22} />
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="w-14 h-14 rounded-full border border-[#3C2D24] flex items-center justify-center bg-[#3C2D24] text-white transition"
-      >
-        <ArrowRight size={22} />
-      </button>
-    </div>
-
-    {/* Dots */}
-    <div className="flex gap-3">
-      {projects.map((_, index) => (
-        <button
-          key={index}
-          onClick={() => setCurrent(index)}
-          className={`rounded-full transition-all duration-300 ${
-            current === index
-              ? "w-10 h-2 bg-[#3C2D24]"
-              : "w-2 h-2 bg-[#3C2D24]/30"
-          }`}
-        />
-      ))}
-    </div>
-  </div>
-</motion.div>
-
-</div>
-
-</div>
-
-</section>
-);
-} 
+    </section>
+  );
+}

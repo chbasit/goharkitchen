@@ -1,27 +1,31 @@
-import HeroSection from "./components/Header";
+import dynamic from "next/dynamic";
+
 import Navbar from "./components/Navbar";
-import AboutSection from "./components/About";
-import ServicesSection from "./components/Services";
-import OurWork from "./components/OurWork";
-import FooterSection from "./components/Footer";
-import Portfolio from "./components/PortfolioSection"
-import Whoweare from "./components/WhoWeAre"
-import Faqs from "./components/Faqs";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import LazyCatalog from "./components/LazyCatalog";
+
+const About = dynamic(() => import("./components/About"));
+const OurWork = dynamic(() => import("./components/OurWork"));
+const WhoWeAre = dynamic(() => import("./components/WhoWeAre"));
+const Services = dynamic(() => import("./components/Services"));
+const Testimonial = dynamic(() => import("./components/Testimonial"));
+
 export default function Home() {
   return (
     <main>
-      <Navbar/>
-      <HeroSection />
-      <Portfolio/>
-<Whoweare/>
-<OurWork/>
-      <AboutSection />
-       
-        
-      {/* <ServicesSection /> */}
-       
-     <Faqs/>
-      <FooterSection />
+      <Navbar />
+      <Header />
+
+      <About />
+      <OurWork />
+      <WhoWeAre />
+      <Services />
+      <Testimonial />
+
+      <LazyCatalog />
+
+      <Footer />
     </main>
   );
 }
