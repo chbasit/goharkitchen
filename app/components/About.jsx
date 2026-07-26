@@ -90,7 +90,7 @@ export default function About() {
 
         <div className="mt-10 space-y-6 text-lg   text-gray-800">
           <p>
-            Malaika Signature Atelier creates bespoke artwork for homes,
+            Malaika Nisar Atelier creates bespoke artwork for homes,
             offices, and commercial interiors. Whether you need a single
             statement masterpiece or a complete themed collection, every
             artwork is thoughtfully designed to complement your space and

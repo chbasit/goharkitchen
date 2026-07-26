@@ -14,11 +14,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <span className="font-display text-5xl tracking-wide text-white">
-              Malaika
+              Malaika Nisar
             </span>
 
             <p className="mt-2 text-lg font-medium uppercase tracking-[6px] text-[fff]">
-              Signature Atelier
+              Atelier
             </p>
 
             <div className="mt-8 h-[1px] w-24 bg-[fff]" />
@@ -53,9 +53,8 @@ export default function Footer() {
                 </p>
 
                 <p className="mt-2 text-lg leading-8">
-                  ArtVision Studio
-                  <br />
-                  Malaika Signature Atelier
+                   
+                  Malaika Nisar Atelier
                 </p>
               </div>
 
