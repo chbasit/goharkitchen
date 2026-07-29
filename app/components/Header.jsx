@@ -21,7 +21,7 @@ export default function Header() {
       {/* Left Content */}
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 lg:px-10">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-5xl ">
             Best Original Oil Paintings
             <br />
             & Canvas Art

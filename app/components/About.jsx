@@ -90,7 +90,7 @@ export default function About() {
                     {step.title}
                   </h4>
 
-                  <p className="mt-3  text-sm md:text-md text-gray-700">
+                  <p className="mt-3  text-sm md:text-lg text-gray-700">
                     {step.copy}
                   </p>
                 </div>
