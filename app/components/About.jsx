@@ -56,7 +56,7 @@ export default function About() {
         </div>
 
         <a
-          href="https://wa.me/923078793323"
+          href="/commission"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 inline-flex items-center gap-3 border border-[#222] px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] transition hover:border-[#a9822e] hover:text-[#a9822e]"
