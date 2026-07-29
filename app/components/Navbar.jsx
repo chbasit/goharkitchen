@@ -59,7 +59,7 @@ const textColor =
     isHome && !scrolled ? "text-white" : "text-[#1f1f1f]"
   }`}
 >
-  Seeman
+  Samman
 </span>
           
           </a>
