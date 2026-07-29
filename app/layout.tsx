@@ -2,11 +2,26 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Malaika Atelier | Bespoke Art for Every Space",
+  title: "Samman | Custom Oil Portraits & Original Paintings",
   description:
-    "Malaika Atelier creates custom artwork for homes, offices and commercial spaces — neon, nature calligraphy, realism, portraits, oil and abstract. Curated for interior designers and restaurants too.",
+    "Discover hand-painted oil portraits, custom commissions, nature paintings, and original artwork by Samman. Timeless paintings created with premium materials for homes, offices, and meaningful gifts.",
+  keywords: [
+    "Samman",
+    "Oil Painter",
+    "Custom Oil Portrait",
+    "Portrait Painting",
+    "Hand Painted Artwork",
+    "Nature Paintings",
+    "Landscape Paintings",
+    "Original Oil Paintings",
+    "Commission Portrait",
+    "Custom Artwork",
+    "Family Portrait Painting",
+    "Pet Portrait",
+    "Wall Art",
+    "Fine Art",
+  ],
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

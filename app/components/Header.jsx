@@ -21,7 +21,7 @@ export default function Header() {
       {/* Left Content */}
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 lg:px-10">
         <div className="max-w-2xl">
-          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-5xl ">
+          <h1 className="text-3xl font-semibold leading-tight text-white md:text-5xl">
             Best Original Oil Paintings
             <br />
             & Canvas Art
@@ -30,7 +30,7 @@ export default function Header() {
           <div className="mt-8">
             <a
               href="/commission"
-              className="rounded-md bg-white px-4 md:px-8 py-2 md:py-4 text-sm lowercase md:uppercase font-semibold  tracking-[0.15em] text-black"
+              className=" bg-white px-4 md:px-8 py-2 md:py-4 text-sm lowercase md:uppercase font-semibold  tracking-[0.15em] text-black"
             >
               Start Your Commission
             </a>

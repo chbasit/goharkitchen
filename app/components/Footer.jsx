@@ -104,14 +104,14 @@ export default function Footer() {
     "
   >
     SAMMAN
-  </h2>
+    </h2>
 </div>
 
         {/* Bottom */}
         <div className="mt-8 flex flex-col gap-6 border-t border-neutral-300 pt-6 text-white text-sm md:flex-row md:items-center md:justify-between">
 
           <p className="italic">
-            © {new Date().getFullYear()} Samman Atelier
+            © {new Date().getFullYear()} Samman 
           </p>
 
           <div className="flex flex-wrap gap-8 italic text-white">
