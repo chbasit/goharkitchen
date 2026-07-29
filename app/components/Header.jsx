@@ -30,7 +30,7 @@ export default function Header() {
           <div className="mt-8">
             <a
               href="/commission"
-              className="rounded-md bg-white px-4 md:px-8 py-2 md:py-4 text-sm font-semibold  tracking-[0.15em] text-black"
+              className="rounded-md bg-white px-4 md:px-8 py-2 md:py-4 text-sm lowercase md:uppercase font-semibold  tracking-[0.15em] text-black"
             >
               Start Your Commission
             </a>
