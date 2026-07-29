@@ -26,3 +26,14 @@ body {
   color: #222222;
   font-family: "Fustat", sans-serif;
 }
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium-custom {
+  font-weight: 500;
+}
+
+.font-bold-custom {
+  font-weight: 700;
+}

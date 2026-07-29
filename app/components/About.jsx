@@ -1,121 +1,106 @@
-// import Image from "next/image";
+"use client";
 
-// export default function About() {
-//   return (
-//     <section id="about" className="bg-white py-20 lg:py-20">
-//       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-//         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-//           {/* Left Image */}
-//           <div className="relative flex justify-center">
-//             <div className="relative overflow-hidden rounded-xl">
-//               <Image
-//                 src="/images/profile.png"
-//                 alt="Ayesh Signature Atelier"
-//                 width={400}
-//                 height={400}
-//                 className="h-auto w-full max-w-[600px] object-cover"
-//                 priority
-//               />
-//             </div>
-//           </div>
+import { ArrowRight } from "lucide-react";
 
-//           {/* Right Content */}
-//           <div>
-//             <span className="eyebrow">About the Atelier</span>
+const STEPS = [
+  {
+    step: "01",
+    title: "Share Your Vision",
+    copy: "Send your favorite photos or describe your idea. Portraits, family memories, pets, landscapes, or completely original concepts are all welcome.",
+  },
+  {
+    step: "02",
+    title: "Hand-Painted with Care",
+    copy: "Every artwork is created by hand using premium oil paints on professional canvas, with regular progress updates throughout the process.",
+  },
+  {
+    step: "03",
+    title: "Delivered to Your Door",
+    copy: "Your finished painting is carefully packaged and shipped safely, ready to become a timeless keepsake or meaningful gift.",
+  },
+];
 
-//             <h2 className="mt-4  text-4xl font-medium leading-tight text-[#222222] sm:text-5xl">
-//               Hi, I&apos;m Malaika.
-//             </h2>
-
-//             <div className="mt-6 h-[2px] w-20 bg-[#a9822e]" />
-
-//             <div className="mt-8">
-//               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#222222]">
-//                  Malaika
-//               </p>
-
-              
-//             </div>
-
-//             <div className="mt-10 space-y-4 text-md  text-gray-800">
-//               <p>
-//                 Malaika Signature Atelier creates bespoke artwork for homes,
-//                 offices, and commercial interiors. Whether you need a single
-//                 statement masterpiece or a complete themed collection, every
-//                 artwork is thoughtfully designed to complement your space and
-//                 reflect your personality.
-//               </p>
-
-//               <p>
-//                 Specializing in neon art, nature calligraphy, realism,
-//                 portraits, oil paintings, and contemporary abstract designs, I
-//                 provide access to over 10,000 creative concepts before crafting
-//                 a unique artwork tailored exclusively for your interior.
-//               </p>
-
-//               <p>
-//                 Interior designers, architects, cafés, restaurants, and luxury
-//                 residences can collaborate on custom collections based on a
-//                 specific mood, color palette, or design concept—ensuring every
-//                 piece is original and never mass-produced.
-//               </p>
-//             </div>
-
-//             <a
-//               href="https://wa.me/923078793323"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="mt-10 inline-flex items-center bg-[#222222] px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#a9822e]"
-//             >
-//               Talk to an Advisor
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 export default function About() {
   return (
-    <section id="about" className="bg-white py-20">
-      <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
-        <span className="eyebrow">About the Atelier</span>
+ <section id="about" className="bg-white py-20">
+  <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+    <div className="grid gap-20 lg:grid-cols-[1fr_1.1fr]">
+      {/* Left */}
+      <div className=" lg:top-28 h-fit">
+        <span className="eyebrow">About the Artist</span>
 
-        <h2 className="mt-4 text-3xl md:text-5xl font-emibold leading-tight text-[#000]">
-          Hi, I&apos;m Malaika.
+        <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
+          Hi, I'm Samman.
         </h2>
 
-
-          
-
-        <div className="mt-10 space-y-6 text-lg   text-gray-800">
+        <div className="mt-8 space-y-6 text-sm md:text-lg text-gray-800">
           <p>
-            Malaika Nisar Atelier creates bespoke artwork for homes,
-            offices, and commercial interiors. Whether you need a single
-            statement masterpiece or a complete themed collection, every
-            artwork is thoughtfully designed to complement your space and
-            reflect your personality.
+            I'm an oil painter dedicated to transforming meaningful moments
+            into timeless works of art. Every painting is handcrafted with
+            patience, precision, and a deep appreciation for storytelling
+            through brushstrokes.
           </p>
 
           <p>
-            Specializing in neon art, nature calligraphy, realism,
-            portraits, oil paintings, and contemporary abstract designs, I
-            provide access to over 10,000 creative concepts before crafting
-            a unique artwork tailored exclusively for your interior.
+            I specialize in custom portraits, original oil paintings, and
+            commissioned artworks for families, collectors, and interior
+            spaces. Every piece is created using premium materials and
+            designed to become an heirloom for generations.
           </p>
 
-          
+          <p>
+            Whether you're celebrating a loved one, preserving a memory, or
+            adding character to your home, my goal is to create artwork that
+            feels personal, emotional, and lasting.
+          </p>
         </div>
 
         <a
           href="https://wa.me/923078793323"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-12 inline-flex items-center bg-[#222222] px-8 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:bg-[#a9822e]"
+          className="mt-10 inline-flex items-center gap-3 border border-[#222] px-7 py-3 text-sm font-medium uppercase tracking-[0.15em] transition hover:border-[#a9822e] hover:text-[#a9822e]"
         >
-          Talk to an Advisor
+          Start a Commission
+          <ArrowRight size={18} />
         </a>
       </div>
-    </section>
+
+      {/* Right */}
+      <div>
+        <span className="eyebrow">My Process</span>
+
+        <h3 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
+          How I Create Your Artwork
+        </h3>
+
+        <div className="mt-12 space-y-4">
+          {STEPS.map((step) => (
+            <div
+              key={step.step}
+              className="rounded-lg border border-[#ece6db] bg-[#faf8f5] p-6 transition duration-300 hover:border-[#a9822e]"
+            >
+              <div className="flex items-start gap-6">
+                <span className="text-3xl font-light text-[#222]">
+                  {step.step}
+                </span>
+
+                <div>
+                  <h4 className="text-xl font-medium text-[#111]">
+                    {step.title}
+                  </h4>
+
+                  <p className="mt-3  text-sm md:text-md text-gray-700">
+                    {step.copy}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   );
 }

@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const FAQS = [
   {
-    q: "How does a custom commission start?",
-    a: "Message me on WhatsApp with a few photos of your space, or your interior style. I'll suggest artwork directions from the 10,000+ design options before anything is created.",
+    q: "How do I order a custom painting?",
+    a: "Simply send me a message with your photos or ideas through Instagram or WhatsApp. We'll discuss your requirements, preferred size, style, and timeline before I begin creating your artwork.",
   },
   {
-    q: "Which styles do you work in?",
-    a: "Neon, nature calligraphy, realism, portraits, oil and abstract — as a single piece, or blended across a room or full project.",
+    q: "What types of paintings do you create?",
+    a: "I specialize in original oil paintings, custom portraits, family portraits, pet portraits, landscape paintings, and personalized commissioned artwork for homes and offices.",
   },
   {
-    q: "Do you work with interior designers and restaurants?",
-    a: "Yes. Share your mood board, palette or ambience brief and I'll develop theme-based artwork sized to your space and scheme.",
+    q: "Can you paint from my photographs?",
+    a: "Yes. High-quality photographs are perfect references for custom portraits. I carefully recreate every detail while preserving the emotion and personality of the original moment.",
   },
   {
-    q: "How long does a commission take?",
-    a: "Timelines depend on size and detail. Once a direction is confirmed, most pieces are completed and ready within a few weeks — I'll confirm an exact date at consultation.",
+    q: "How long does a custom painting take?",
+    a: "Completion time depends on the size and level of detail. Most commissioned paintings are finished within 2–4 weeks, and I'll provide an estimated delivery date before starting.",
   },
   {
-    q: "Do you ship and install?",
-    a: "Yes, pieces are carefully packed and can be delivered and installed for homes, offices and commercial spaces.",
+    q: "Do you ship paintings worldwide?",
+    a: "Yes. Every painting is securely packaged to ensure safe delivery, and I offer shipping for both local and international orders.",
   },
 ];
 
@@ -29,11 +29,11 @@ export default function Faqs() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-[#f7f6f2] py-24">
+    <section className=" py-24">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="text-center">
           <span className="eyebrow">Questions</span>
-          <h2 className="font-display mt-4 text-[2.1rem] font-medium leading-tight text-[#222222] sm:text-[2.5rem]">
+          <h2 className="font-display mt-4 text-3xl md:text-5xl font-medium leading-tight text-[#222222] ">
             Good to know before you reach out
           </h2>
         </div>
@@ -48,11 +48,11 @@ export default function Faqs() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                 >
-                  <span className="font-display text-[1.05rem] font-medium text-[#222222]">
+                  <span className="text-md md:text-2xl font-regualar text-[#222222]">
                     {item.q}
                   </span>
                   <span
-                    className={`shrink-0 text-[1.3rem] font-light text-[#a9822e] transition-transform ${
+                    className={`shrink-0 text-md md:text-2xl  text-[#a9822e] transition-transform ${
                       isOpen ? "rotate-45" : ""
                     }`}
                     aria-hidden="true"
@@ -61,7 +61,7 @@ export default function Faqs() {
                   </span>
                 </button>
                 {isOpen && (
-                  <p className="pb-7 pr-10 text-[0.92rem] leading-relaxed text-[#6b6963]">
+                  <p className="pb-7 pr-10 text-md md:text-lg  leading-relaxed text-gray-900">
                     {item.a}
                   </p>
                 )}

@@ -1,14 +1,23 @@
 "use client";
 
-import { useState, useEffect } from "react";
 
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  ShoppingBag,
+  Search,
+} from "lucide-react";
 const LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Who We Work With", href: "#who-we-work-with" },
-  { label: "About", href: "#about" },
-  { label: "Catalog", href: "#catalog" },
-
+  { label: "Home", href: "/" },
+  { label: "Shop", href: "#shop" },  
+  { label: "Collections", href: "#collections" },
+  { label: "Best Sellers", href: "#best-sellers" },
+  { label: "About", href: "#About" },
+  { label: "Contact", href: "#contact" },
+  { label: "Commission", href: "/commission" },
 ];
 
 export default function Navbar() {
@@ -16,101 +25,143 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+const pathname = usePathname();
+const isHome = pathname === "/";
+const textColor =
+  isHome && !scrolled
+    ? "text-white hover:text-gray-200"
+    : "text-[#222] hover:text-[#043852]";
   return (
-    <header
-      className={`sticky top-0 z-50 bg-white/95 backdrop-blur transition-shadow ${
-        scrolled ? "shadow-[0_1px_0_0_#e7e4dc]" : ""
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        {/* Wordmark */}
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-[1.4rem] tracking-tight text-[#222222]">
-            Malaika Nisar
-          </span>
-           
-        </a>
+    <>
+   
 
-        {/* Desktop links */}
-        <nav className="hidden items-center gap-9 lg:flex">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[0.85rem] font-medium text-[#222222] transition-colors hover:text-[#a9822e]"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+ <div
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    isHome
+      ? scrolled
+        ? "bg-white shadow-md"
+        : "bg-transparent"
+      : "bg-white shadow-md"
+  }`}
+>
+        <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6">
 
-        <div className="hidden lg:block">
-          <a
-            href="https://wa.me/923078793323"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-[#222222] px-5 py-2.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-[#222222] transition-colors hover:border-[#a9822e] hover:text-[#a9822e]"
-          >
-            Talk to MALAIKA
+          {/* Logo */}
+          <a href="/" className="flex flex-col">
+           <span
+  className={`font-serif text-3xl ${
+    isHome && !scrolled ? "text-white" : "text-[#1f1f1f]"
+  }`}
+>
+  Seeman
+</span>
+          
           </a>
-        </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] lg:hidden"
-        >
-          <span
-            className={`h-px w-6 bg-[#222222] transition-transform ${
-              open ? "translate-y-[6px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-px w-6 bg-[#222222] transition-opacity ${
-              open ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`h-px w-6 bg-[#222222] transition-transform ${
-              open ? "-translate-y-[6px] -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </div>
+       <nav className="hidden items-center gap-10 lg:flex">
+  {LINKS.map((item) => (
+    <Link
+      key={item.label}
+      href={item.href}
+      className={`text-md font-medium transition ${textColor}`}
+    >
+      {item.label}
+    </Link>
+  ))}
+</nav>
 
-      {/* Mobile panel */}
-      {open && (
-        <div className="border-t border-[#e7e4dc] bg-white px-6 py-6 lg:hidden">
-          <nav className="flex flex-col gap-5">
-            {LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="text-[0.95rem] font-medium text-[#222222]"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div
+  className={`hidden items-center gap-5 lg:flex ${
+    isHome && !scrolled ? "text-white" : "text-[#222]"
+  }`}
+>
+
+           <div
+  className={`flex items-center rounded-full px-4 py-2 ${
+    isHome && !scrolled
+      ? "border border-white/50 bg-white/10"
+      : "border border-[#ddd] bg-white"
+  }`}
+>
+  <Search
+    size={16}
+    className={isHome && !scrolled ? "text-white" : "text-gray-400"}
+  />
+  <input
+    type="text"
+    placeholder="Start typing..."
+    className={`ml-2 w-25 bg-transparent text-sm outline-none ${
+      isHome && !scrolled
+        ? "text-white placeholder:text-white/70"
+        : "placeholder:text-gray-400"
+    }`}
+  />
+</div>
+
+            
+
+            {/* Bag */}
             <a
-              href="https://wa.me/923078793323"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 border border-[#222222] px-5 py-3 text-center text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-[#222222]"
+              href="#"
+              className="relative flex items-center gap-2 text-sm font-medium hover:text-[#043852]"
             >
-              Talk to MALAIKA
+              <ShoppingBag size={20} />
+              {/* Bag */}
+              {/* <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#043852] text-[10px] text-white">
+                0
+              </span> */}
             </a>
-          </nav>
+          </div>
+
+          <button
+  onClick={() => setOpen(!open)}
+  className={`lg:hidden ${
+    isHome && !scrolled ? "text-white" : "text-[#222]"
+  }`}
+>
+  {open ? <X size={28} /> : <Menu size={28} />}
+</button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Menu */}
+        {open && (
+          <div className="border-t bg-white px-6 py-6 lg:hidden">
+            <div className="mb-5 flex items-center rounded-full border px-4 py-3">
+              <Search size={18} />
+              <input
+                placeholder="Start typing..."
+                className="ml-3 flex-1 outline-none"
+              />
+            </div>
+
+            <nav className="flex flex-col gap-5">
+              {LINKS.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base"
+                >
+                  {item.label}
+                </a>
+              ))}
+
+             
+
+              <a href="#" className="flex items-center gap-3">
+                <ShoppingBag size={18} />
+                Bag
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
