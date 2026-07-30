@@ -97,7 +97,7 @@ export default function Footer() {
       uppercase
       leading-[0.82]
       tracking-[-0.06em]
-      text-[24vw]
+      text-[16vw]
       lg:text-[15vw]
       text-[#d9d9d9]
       select-none
