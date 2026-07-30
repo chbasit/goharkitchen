@@ -1,8 +1,10 @@
 import CommissionForm from "../components/CommissionForm";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 export const metadata = {
-  title: "Custom Oil Painting Commission | Malaika Signature Atelier",
+  title: "Custom Oil Painting Commission |Samman",
   description:
     "Commission a hand-painted oil portrait — people, pets, or family memories, made into a timeless keepsake.",
 };
@@ -31,6 +33,7 @@ export default function CommissionPage() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
