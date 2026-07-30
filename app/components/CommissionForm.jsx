@@ -193,13 +193,23 @@ function Field({ label, name, type = "text", required, ...rest }) {
       <label className="mb-2 block text-md font-medium uppercase tracking-[0.1em] text-[#1d1d1d]">
         {label} {required && "*"}
       </label>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="w-full rounded-md border border-[#ece6db] bg-[#faf8f5] p-3 text-md"
-        {...rest}
-      />
+     <input
+  type={type}
+  name={name}
+  required={required}
+  className={`
+    w-full
+    min-w-0
+    rounded-md
+    border
+    border-[#ece6db]
+    bg-[#faf8f5]
+    p-3
+    text-md
+    ${type === "date" ? "appearance-none" : ""}
+  `}
+  {...rest}
+/>
     </div>
   );
 }
