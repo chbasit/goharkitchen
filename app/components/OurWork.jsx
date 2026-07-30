@@ -36,8 +36,8 @@ export default function OurWork() {
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
  
 
-  <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
-    Collection
+  <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-5xl">
+   Discover our collection
   </h2>
  
 </div>

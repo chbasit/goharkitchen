@@ -31,7 +31,7 @@ export default function Services() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="max-auto text-center">
           <span className="eyebrow">Services</span>
-          <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
+          <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-5xl">
             Custom art, for every kind of space
           </h2>
         </div>

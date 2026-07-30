@@ -5,7 +5,7 @@ export default function Header() {
     <section className="relative h-screen min-h-[700px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/headeroil.webp"
+        src="/images/h.jpg"
         alt="Malaika Signature Atelier"
         fill
         priority
@@ -22,8 +22,8 @@ export default function Header() {
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 lg:px-10">
         <div className="max-w-2xl">
           <h1 className="text-3xl font-semibold leading-tight text-white md:text-5xl">
-            Best Original Oil Paintings
-            <br />
+            Best Original Oil<br /> Paintings
+            
             & Canvas Art
           </h1>
 

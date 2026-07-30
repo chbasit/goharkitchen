@@ -16,7 +16,7 @@ export default function InstagramFeed() {
           <div>
             
 
-            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
+            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-5xl">
               Instagram Gallery
             </h2>
 
