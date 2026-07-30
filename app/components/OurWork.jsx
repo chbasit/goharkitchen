@@ -21,16 +21,6 @@ const GALLERY_ROWS = [
       { src: "/images/header2.webp", alt: "Ayesh Signature Atelier — commissioned artwork 6" },
     ],
   },
-  
-  {
-    cols: 3,
-    aspect: "aspect-[3/4]",
-    images: [
-      { src: "/images/seeman4.jpg", alt: "Ayesh Signature Atelier — commissioned artwork 8" },
-      { src: "/images/seeman5.jpg", alt: "Ayesh Signature Atelier — commissioned artwork 9" },
-      { src: "/images/natur4.webp", alt: "Ayesh Signature Atelier — commissioned artwork 10" },
-    ],
-  },
 ];
 
 const COLS_CLASS = {
