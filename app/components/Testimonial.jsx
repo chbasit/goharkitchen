@@ -79,13 +79,13 @@ export default function Testimonial() {
         }
       `}</style>
 
-      <section className="bg-white py-20 overflow-hidden">
-        <div className="mx-auto max-w-8xl px-6 lg:px-10">
+      <section className="bg-white pb-20 overflow-hidden">
+        <div className="mx-auto max-w-[1450px] px-6 lg:px-10">
           {/* Heading */}
           <div className="text-center">
             
 
-            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-5xl">
+            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
               Trusted by Worldwide
             </h2>
           </div>
@@ -106,7 +106,7 @@ export default function Testimonial() {
   </div>
 
   {/* Quote */}
-  <blockquote className="flex-1 text-sm md:text-md  text-[#222222]">
+  <blockquote className="flex-1 text-sm md:text-[15px] text-[#222222]">
     "{item.quote}"
   </blockquote>
 

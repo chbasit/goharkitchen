@@ -48,11 +48,11 @@ export default function PaintingDetails({ painting }) {
       <div className="mt-10 space-y-6">
 
     
-<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+<div className="mt-2 grid grid-cols-1 gap-6 md:grid-cols-3">
 
   {/* Size */}
   <div>
-    <label className="mb-2 block text-sm font-semibold uppercase tracking-[0.12em]">
+    <label className="mb-2 block text-sm        ">
       Size
     </label>
 
@@ -78,7 +78,7 @@ export default function PaintingDetails({ painting }) {
 
   {/* Frame */}
   <div>
-    <label className="mb-2 block text-sm font-semibold uppercase tracking-[0.12em]">
+    <label className="mb-2 block text-sm        ">
       Frame
     </label>
 
@@ -104,7 +104,7 @@ export default function PaintingDetails({ painting }) {
 
   {/* Finish */}
   <div>
-    <label className="mb-2 block text-sm font-semibold uppercase tracking-[0.12em]">
+    <label className="mb-2 block text-sm        ">
       Finish
     </label>
 
@@ -134,7 +134,7 @@ export default function PaintingDetails({ painting }) {
 
      
 
-     <div className="mt-8 grid grid-cols-1 gap-6   md:grid-cols-2">
+     <div className="mt-4 grid grid-cols-1 gap-6   md:grid-cols-2">
 
   <div className="flex items-center justify-between  p-5">
     <span className="text-gray-800 font-semibold">Medium:</span>
@@ -152,7 +152,7 @@ export default function PaintingDetails({ painting }) {
 
 </div>
 
-      <p className="mt-8 text-md md:text-lg text-gray-800">
+      <p className="mt-4 text-md md:text-[15px] text-gray-800">
         {painting.description}
       </p>
 

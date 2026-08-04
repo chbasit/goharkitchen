@@ -66,7 +66,7 @@ export default function CommissionForm() {
       <div className="rounded-lg border border-[#ece6db] bg-[#faf8f5] p-10 text-center">
         <CheckCircle2 className="mx-auto mb-4 text-[#a9822e]" size={40} />
         <h3 className="text-2xl text-[#1d1d1d]">Request Received!</h3>
-        <p className="mt-3 text-gray-700">
+        <p className="mt-3 text-gray-700 ">
           Thank you — I've received your commission details and photos.
           I'll reply within 24–48 hours with pricing and next steps.
         </p>
@@ -74,7 +74,7 @@ export default function CommissionForm() {
           href="https://wa.me/923078793323"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block text-md font-medium uppercase tracking-[0.15em] text-[#a9822e] underline"
+          className="mt-6 inline-block text-md font-medium  tracking-[0.15em] text-[#a9822e] underline"
         >
           Or message me directly on WhatsApp
         </a>
@@ -126,7 +126,7 @@ export default function CommissionForm() {
 
       {/* Reference photos */}
       <div>
-        <label className="mb-2 block text-md font-medium uppercase tracking-[0.1em] text-[#1d1d1d]">
+        <label className="mb-2 block text-md font-medium      text-[#1d1d1d]">
           Reference Photos *
         </label>
         <input
@@ -152,7 +152,7 @@ export default function CommissionForm() {
 
       {/* Notes */}
       <div>
-        <label className="mb-2 block text-md font-medium uppercase tracking-[0.1em] text-[#1d1d1d]">
+        <label className="mb-2 block text-md font-medium      text-[#1d1d1d]">
           Style Notes / Special Requests
         </label>
         <textarea
@@ -173,7 +173,7 @@ export default function CommissionForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="flex w-full items-center justify-center gap-3 border border-[#1d1d1d] bg-[#043852] px-8 py-4 text-md font-semibold uppercase tracking-[0.15em] text-white transition hover:border-[#a9822e] hover:bg-[#a9822e] disabled:opacity-60"
+        className="flex w-full items-center justify-center gap-3 border border-[#1d1d1d] bg-[#043852] px-8 py-4 text-md font-semibold   tracking-[0.15em] text-white transition hover:border-[#a9822e] hover:bg-[#a9822e] disabled:opacity-60"
       >
         {status === "loading" ? (
           <>
@@ -190,7 +190,7 @@ export default function CommissionForm() {
 function Field({ label, name, type = "text", required, ...rest }) {
   return (
     <div>
-      <label className="mb-2 block text-md font-medium uppercase tracking-[0.1em] text-[#1d1d1d]">
+      <label className="mb-2 block text-md font-medium      text-[#1d1d1d]">
         {label} {required && "*"}
       </label>
      <input
@@ -217,7 +217,7 @@ function Field({ label, name, type = "text", required, ...rest }) {
 function SelectField({ label, name, options, required }) {
   return (
     <div>
-      <label className="mb-2 block text-md font-medium uppercase tracking-[0.1em] text-[#1d1d1d]">
+      <label className="mb-2 block text-md font-medium      text-[#1d1d1d]">
         {label} {required && "*"}
       </label>
       <select

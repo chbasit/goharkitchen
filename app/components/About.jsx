@@ -29,11 +29,11 @@ export default function About() {
       <div className=" lg:top-28 h-fit">
         <span className="eyebrow">About the Artist</span>
 
-        <h2 className="mt-4 text-2xl text-[#222] lg:text-5xl">
+        <h2 className="mt-4 text-2xl text-[#222] lg:text-4xl">
           Hi, I'm Samman.
         </h2>
 
-        <div className="mt-8 space-y-6 text-sm md:text-lg text-gray-800">
+        <div className="mt-8 space-y-6 text-sm md:text-[16px] text-gray-800">
           <p>
             I'm an oil painter dedicated to transforming meaningful moments
             into timeless works of art. Every painting is handcrafted with
@@ -70,7 +70,7 @@ export default function About() {
       <div>
         <span className="eyebrow">My Process</span>
 
-        <h3 className="mt-4 text-2xl text-[#222] lg:text-5xl">
+        <h3 className="mt-4 text-2xl text-[#222] lg:text-4xl">
           How I Create Your Artwork
         </h3>
 
@@ -90,7 +90,7 @@ export default function About() {
                     {step.title}
                   </h4>
 
-                  <p className="mt-3  text-sm md:text-lg text-gray-800">
+                  <p className="mt-3  text-sm md:text-[16px] text-gray-800">
                     {step.copy}
                   </p>
                 </div>

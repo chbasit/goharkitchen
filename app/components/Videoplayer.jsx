@@ -9,14 +9,14 @@ const VIDEOS = [
 
 export default function InstagramFeed() {
   return (
-    <section className="py-16">
-      <div className="mx-auto max-w-8xl px-6 lg:px-10">
+    <section className="pb-16">
+      <div className="mx-auto max-w-[1450px] px-6 lg:px-10">
         {/* Heading */}
         <div className="mb-14 flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
             
 
-            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-5xl">
+            <h2 className="mt-4 text-2xl text-[#1d1d1d] lg:text-4xl">
               Instagram Gallery
             </h2>
 

@@ -53,7 +53,7 @@ export default async function PaintingPage({ params }) {
                   The Story Behind This Painting
                 </h2>
 
-                <p className="mt-6 text-sm md:text-lg text-gray-800">
+                <p className="mt-6 text-sm md:text-[16px] text-gray-800">
                   {painting.story}
                 </p>
 
@@ -76,7 +76,7 @@ export default async function PaintingPage({ params }) {
                   Handmade with Care
                 </h3>
 
-                <p className="mt-4  text-gray-800 text-sm md:text-lg">
+                <p className="mt-4  text-gray-800 text-sm md:text-[16px]">
                   Every artwork is painted entirely by hand using professional
                   oil paints on premium canvas. No prints or digital
                   reproductions are used.
@@ -88,7 +88,7 @@ export default async function PaintingPage({ params }) {
                   Museum Quality Materials
                 </h3>
 
-                <p className="mt-4  text-gray-800 text-sm md:text-lg">
+                <p className="mt-4  text-gray-800 text-sm md:text-[16px]">
                   High-quality stretched canvas, archival oil paints, and
                   durable protective finishes ensure your artwork lasts for
                   generations.
@@ -100,7 +100,7 @@ export default async function PaintingPage({ params }) {
                   Secure Worldwide Shipping
                 </h3>
 
-                <p className="mt-4  text-gray-800 text-sm md:text-lg">
+                <p className="mt-4  text-gray-800 text-sm md:text-[16px]">
                   Each painting is professionally packaged and shipped safely
                   with protective materials to arrive in perfect condition.
                 </p>
@@ -113,7 +113,7 @@ export default async function PaintingPage({ params }) {
           {/* Quote */}
           <div className="mt-24 rounded-xl bg-[#faf8f5] p-12 text-center">
 
-            <p className="text-3xl leading-relaxed text-[#043852] lg:text-5xl">
+            <p className="text-3xl leading-relaxed text-[#043852] lg:text-3xl">
               "Art is more than decoration, it preserves memories,
               tells stories, and brings emotion into every space."
             </p>
